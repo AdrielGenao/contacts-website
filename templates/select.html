@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h1>Editing Contacts Selection</h1>
+    <form action="http://localhost:5000/editing" method="POST">
+    {%for a in range(1,len)%}
+    <input type="radio" name="selection" id="{{a}}" value="{{a}}">
+    <label for="{{a}}">{{contacts[a][0]}}, {{contacts[a][1]}}, {{contacts[a][2]}}</label>
+    <p></p>
+    {%endfor%}
+    <input type="submit" value="Back" onclick="history.back()">   
+    <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
+  
